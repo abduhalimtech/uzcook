@@ -21,16 +21,16 @@ class Recipe extends Model
 
     public function nutritionalInformation()
     {
-        return $this->hasOne(NutritionalInformation::class, 'recipe_id');
+        return $this->hasOne(NutritionalInformation::class);
     }
 
     public function favorites()
     {
-        return $this->hasMany(CustomerFavorite::class, 'recipe_id');
+        return $this->hasMany(CustomerFavorite::class);
     }
 
     public function equipmentNeeded()
     {
-        return $this->hasMany(EquipmentNeeded::class, 'recipe_id');
+        return $this->hasMany(EquipmentNeeded::class);
     }
 }

@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('nutritional_information', function (Blueprint $table) {
-            $table->foreignId('recipe_id')->constrained('recipes', 'recipe_id')->onDelete('cascade');
+            $table->foreignId('recipe_id')->constrained('recipes', 'id')->onDelete('cascade');
             $table->integer('calories');
             $table->decimal('protein', 5, 2);
             $table->decimal('carbohydrates', 5, 2);

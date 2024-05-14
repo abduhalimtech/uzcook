@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('allergens', function (Blueprint $table) {
-            $table->id('allergen_id');
+            $table->id('id');
             $table->string('name');
             $table->timestamps();
         });

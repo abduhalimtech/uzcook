@@ -11,8 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('customer_preferences', function (Blueprint $table) {
-            $table->id('preference_id');
-            $table->foreignId('customer_id')->constrained('customers', 'customer_id')->onDelete('cascade');
+            $table->id('id');
+            $table->foreignId('customer_id')->constrained('customers', 'id')->onDelete('cascade');
             $table->string('preference_type');
             $table->string('preference_value');
             $table->timestamps();

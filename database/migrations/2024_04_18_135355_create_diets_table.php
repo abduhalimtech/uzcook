@@ -10,9 +10,9 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('customer_favorites', function (Blueprint $table) {
-            $table->foreignId('customer_id')->constrained('customers', 'id')->onDelete('cascade');
-            $table->foreignId('recipe_id')->constrained('recipes', 'id')->onDelete('cascade');
+        Schema::create('diets', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('name');
             $table->timestamps();
         });
 
@@ -23,6 +23,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('customer_favorites');
+        Schema::dropIfExists('diets');
     }
 };

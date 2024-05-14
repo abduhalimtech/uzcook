@@ -14,12 +14,12 @@ class RecipeIngredient extends Model
 
     public function recipe()
     {
-        return $this->belongsTo(Recipe::class, 'recipe_id');
+        return $this->belongsTo(Recipe::class);
     }
 
     public function ingredient()
     {
-        return $this->belongsTo(Ingredient::class, 'ingredient_id');
+        return $this->belongsTo(Ingredient::class);
     }
 
 }

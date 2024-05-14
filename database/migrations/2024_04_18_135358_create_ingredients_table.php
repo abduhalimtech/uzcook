@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('ingredients', function (Blueprint $table) {
-            $table->id('ingredient_id');
+            $table->id('id');
             $table->string('name');
             $table->string('category');
             $table->timestamps();
